@@ -1,0 +1,23 @@
+2018-10-26 01:09:47 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-10-26 01:09:47 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 912276,
+ 'downloader/request_count': 1811,
+ 'downloader/request_method_count/GET': 1811,
+ 'downloader/response_bytes': 92915917,
+ 'downloader/response_count': 1811,
+ 'downloader/response_status_count/200': 1810,
+ 'downloader/response_status_count/404': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 10, 26, 5, 9, 47, 649231),
+ 'item_scraped_count': 2920,
+ 'log_count/DEBUG': 7260,
+ 'log_count/INFO': 61,
+ 'log_count/WARNING': 2,
+ 'request_depth_max': 1,
+ 'response_received_count': 1811,
+ 'scheduler/dequeued': 1810,
+ 'scheduler/dequeued/disk': 1810,
+ 'scheduler/enqueued': 1810,
+ 'scheduler/enqueued/disk': 1810,
+ 'start_time': datetime.datetime(2018, 10, 26, 4, 15, 6, 833103)}
+2018-10-26 01:09:47 [scrapy.core.engine] INFO: Spider closed (finished)

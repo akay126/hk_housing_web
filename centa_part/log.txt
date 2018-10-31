@@ -1,0 +1,48 @@
+2018-10-26 03:31:11 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-10-26 03:31:20 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method MultiCSVItemPipeline.spider_closed of <centa_part.pipelines.MultiCSVItemPipeline object at 0x0000020E74EFDC88>>
+Traceback (most recent call last):
+  File "C:\Users\ahkay\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 151, in maybeDeferred
+    result = f(*args, **kw)
+  File "C:\Users\ahkay\Anaconda3\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Code\Python\hk_housing_web\centa_part\centa_part\pipelines.py", line 54, in spider_closed
+    f = read_csv('centacode.csv')
+  File "C:\Users\ahkay\Anaconda3\lib\site-packages\pandas\io\parsers.py", line 678, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\ahkay\Anaconda3\lib\site-packages\pandas\io\parsers.py", line 440, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\ahkay\Anaconda3\lib\site-packages\pandas\io\parsers.py", line 787, in __init__
+    self._make_engine(self.engine)
+  File "C:\Users\ahkay\Anaconda3\lib\site-packages\pandas\io\parsers.py", line 1014, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "C:\Users\ahkay\Anaconda3\lib\site-packages\pandas\io\parsers.py", line 1708, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas\_libs\parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+2018-10-26 03:31:20 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 13644308,
+ 'downloader/request_count': 27073,
+ 'downloader/request_method_count/GET': 27073,
+ 'downloader/response_bytes': 585068061,
+ 'downloader/response_count': 27073,
+ 'downloader/response_status_count/200': 26922,
+ 'downloader/response_status_count/302': 150,
+ 'downloader/response_status_count/404': 1,
+ 'dupefilter/filtered': 229,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 10, 26, 7, 31, 11, 286068),
+ 'item_scraped_count': 1589781,
+ 'log_count/DEBUG': 1616856,
+ 'log_count/ERROR': 9,
+ 'log_count/INFO': 257,
+ 'log_count/WARNING': 1,
+ 'request_depth_max': 1,
+ 'response_received_count': 26923,
+ 'scheduler/dequeued': 27072,
+ 'scheduler/dequeued/disk': 27072,
+ 'scheduler/enqueued': 27072,
+ 'scheduler/enqueued/disk': 27072,
+ 'spider_exceptions/ValueError': 2,
+ 'spider_exceptions/ZeroDivisionError': 6,
+ 'start_time': datetime.datetime(2018, 10, 26, 3, 20, 28, 127302)}
+2018-10-26 03:31:20 [scrapy.core.engine] INFO: Spider closed (finished)

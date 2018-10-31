@@ -1,0 +1,72 @@
+//*[@id="pmastscpviewer_mpest"]/tbody/tr/td/table/tbody/tr[5]/td[1]/table
+
+LAYER ONE
+http://www1.centadata.com/epaddresssearch1.aspx?type=district16&code=HK
+all the district codes
+response.xpath('//*[@title="Properties in District"]/tr/@onclick').extract()
+"javascript:jsfreloadthis5('district17','117','','','0');"
+
+all the district names
+response.xpath('//*[@title="Properties in District"]/tr/td/span/text()').extract()
+
+all values 
+list(map(lambda x: x.replace('\xa0',''),r))
+
+
+class="tdreg1cname"
+class="tdreg1vol"
+class="tdreg1uprice"
+class="tdreg1Guprice"
+class="tdreg1bldgage"
+class="tdreg1bldgcnt"
+list(map(lambda x: x.replace('\xa0',''),r))
+
+LAYER TWO
+
+http://www1.centadata.com/epaddresssearch1.aspx?type=district17&code=201&info=&code2=&page=0
+
+this one below
+http://www1.centadata.com/eptest.aspx?type=3&code=LIDHTHXXHT&info=basicinfo&code2=&page=0
+
+all bldg in district loop page needed
+
+page number to loop
+response.xpath('//*[@id="Form2"]/table[3]/tr/td[2]/text()').extract()
+
+all building code
+response.xpath('//*[@title="Transaction Records"]/tr/@onclick').extract()
+
+class="tdscp1cname"
+response.xpath('//*[@title="Transaction Records"]/tr/td/span/text()').extract()
+
+class="tdscp1addr"
+response.xpath('//*[@class="tdscp1addr"]/text()').extract()
+list(map(lambda x: x.replace('\xa0',''),r))
+r[2:]
+
+class="tdscp1type"
+response.xpath('//*[@class="tdscp1type"]/text()').extract()
+list(map(lambda x: x.replace('\xa0',''),r))
+r[2:]
+
+class="tdscp1bldgage"
+response.xpath('//*[@class="tdscp1bldgage"]/text()').extract()
+list(map(lambda x: x.replace('\xa0',''),r))
+r[2:]
+
+class="tdscp1unitcnt"
+response.xpath('//*[@class="tdscp1unitcnt"]/text()').extract()
+list(map(lambda x: x.replace('\xa0',''),r))
+r[2:]
+
+
+LAYER THREE NEED TO LOOP
+
+Type 3
+ "javascript:jsfreloadthis4(2,'TLMLZHZXDZ',jsminfo,0);"
+response.xpath('//*[@bgcolor="#ffffff"]/td/a/@href').extract()
+
+Type 2
+response.xpath('//*[@bgcolor="#ffffff"]/td/a/@href').extract()
+http://hk.centadata.com/tfs_centadata/Pih2Sln/TransactionHistory.aspx?type=1&code=TLLSZHZOTZ
+
